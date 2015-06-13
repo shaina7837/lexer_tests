@@ -9,12 +9,19 @@ int main(){
 	lexertl::state_machine sm_;
 
 	rules_.push("[0-9]+",1); // arguments are regex for pattern matching and id for categorization of tokens
-    	rules_.push("[//.*$]", 2);
+    	rules_.push("[/][/].*$", 2);
+	rules_.push("[/][*].*?[*][/]", 3);
 	lexertl::generator::build(rules_, sm_);
 	
 	std::string std_input;
+	std::string line;
 	std::cout << "enter Comment\n " <<std::flush;
-	std::cin >> std_input ;
+	
+	while(std::getline(std::cin, line)){
+		if(line == "^D")
+		break;
+		std_input += line;
+	}
 	std::string input(std_input);
         lexertl::smatch results (input.begin(), input.end());
         lexertl::lookup(sm_, results);
