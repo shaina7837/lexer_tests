@@ -13,7 +13,7 @@ int main(){
 	lexertl::generator::build(rules_, sm_);
 	
 	std::string std_input;
-	std::cout << "enter number" <<std::flush;
+	std::cout << "enter Comment\n " <<std::flush;
 	std::cin >> std_input ;
 	std::string input(std_input);
         lexertl::smatch results (input.begin(), input.end());
