@@ -1,1 +1,9 @@
-includefilenamescaddifferencesphere20cube20
+<keyword>include</keyword> "<var>filename</var>.<var>scad</var>"
+
+<Comment>/* difference(){
+	sphere(20);
+	cube(20);
+}
+*/</Comment>
+<keyword>module</keyword> 
+<keyword>function</keyword> <keyword>use</keyword>
